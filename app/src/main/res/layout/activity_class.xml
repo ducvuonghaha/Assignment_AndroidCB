@@ -91,7 +91,7 @@
     <Button
         android:backgroundTint="@color/gray"
         android:id="@+id/btnClear"
-        android:text="Xóa trắng"
+        android:text="Nhập lại"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
