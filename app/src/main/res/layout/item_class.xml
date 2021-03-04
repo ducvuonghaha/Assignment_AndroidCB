@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    android:weightSum="3"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="1"
+        android:textColor="@color/black"
+        android:layout_weight="0.5"
+        android:id="@+id/tvIdClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="LOP??"
+        android:textColor="@color/black"
+        android:layout_weight="1.5"
+        android:id="@+id/tvNameClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="CN??"
+        android:textColor="@color/black"
+        android:layout_weight="1"
+        android:id="@+id/tvMajorClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

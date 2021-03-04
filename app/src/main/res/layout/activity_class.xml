@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:layout_height="match_parent"
+    tools:context=".activity.ClassActivity">
+
+    <TextView
+        android:textColor="@color/purple_700"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="Quản lý lớp học"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Nhập tên lớp"
+        android:textColorHint="#9F9F9F"
+        app:hintTextColor="@color/black">
+
+        <EditText
+            android:id="@+id/edtNameClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Nhập ngành"
+        android:textColorHint="#9F9F9F"
+        app:hintTextColor="@color/black">
+
+        <EditText
+            android:id="@+id/edtMajorClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:backgroundTint="@color/gray"
+            android:id="@+id/btnAdd"
+            android:text="Thêm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:backgroundTint="@color/gray"
+            android:id="@+id/btnUpdate"
+            android:layout_marginLeft="15dp"
+            android:text="Sửa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:backgroundTint="@color/gray"
+            android:id="@+id/btnDelete"
+            android:layout_marginLeft="15dp"
+            android:text="Xóa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:backgroundTint="@color/gray"
+        android:id="@+id/btnClear"
+        android:text="Xóa trắng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Danh sách các lớp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:text="ID"
+            android:textColor="@color/black"
+            android:layout_weight="0.5"
+            android:id="@+id/tvIdClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:text="Tên"
+            android:textColor="@color/black"
+            android:layout_weight="1.5"
+            android:id="@+id/tvNameClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:text="Chuyên ngành"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:id="@+id/tvMajorClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/rcvListClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
