@@ -99,7 +99,25 @@
             </LinearLayout>
         </LinearLayout>
 
+        <Button
+            android:drawableLeft="@drawable/ic_baseline_exit_to_app_24"
+            android:text="Đăng xuất"
+            android:layout_gravity="center"
+            android:id="@+id/btnSignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
+
 
 
 </RelativeLayout>

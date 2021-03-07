@@ -24,6 +24,11 @@ public class SQLiteHelperManageStudent extends SQLiteOpenHelper {
     public static final String STUDENT_BIRTHDAY = "NgaySinhSinhVien";
 
 
+    public static final String USER_TABLE = "NguoiDung";
+    public static final String USER_USERNAME= "TenDangNhapNguoiDung";
+    public static final String USER_PASSWORD = "MatKhauNguoiDung";
+
+
     public SQLiteHelperManageStudent(@Nullable Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
@@ -46,11 +51,19 @@ public class SQLiteHelperManageStudent extends SQLiteOpenHelper {
                 ")";
 
         db.execSQL(CREATE_STUDENT_TABLE);
+
+        String CREATE_USER_TABLE = "CREATE TABLE " + USER_TABLE + "(" +
+                "" + USER_USERNAME + " NVARCHAR(100) NOT NULL," +
+                "" + USER_PASSWORD + " NVARCHAR(100) NOT NULL" +
+                ")";
+
+        db.execSQL(CREATE_USER_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + CLASS_TABLE);
         db.execSQL("DROP TABLE IF EXISTS " + STUDENT_TABLE);
+        db.execSQL("DROP TABLE IF EXISTS " + USER_TABLE);
     }
 }
